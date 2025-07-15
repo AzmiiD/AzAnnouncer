@@ -4,7 +4,7 @@ AzAnnouncer is a lightweight, configurable, and easy-to-use automatic announcer 
 
 Designed to deliver custom messages in the chat on a timed interval, AzAnnouncer keeps your server active with regular messages like rules, vote reminders, and server tips — all while supporting sound effects and fully customizable settings.
 
----
+----
 
 ## ✨ Features
 
