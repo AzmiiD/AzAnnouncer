@@ -1,0 +1,76 @@
+# AzAnnouncer Configuration
+# Support hex colors with &#FFFFFF format
+# Support PlaceholderAPI placeholders (if installed)
+# Message types: chat, actionbar, title, subtitle
+
+# Command configuration
+commands:
+  reload: "azannouncer reload"
+  reload-aliases: ["rl"]
+  send: "azannouncer send"
+  send-aliases: ["azsend"]
+
+# Plugin prefix for messages
+prefix: "&e&lAzAnnouncer &7>> "
+
+# Global settings
+settings:
+  # Enable/disable automatic announcements
+  enabled: true
+
+  # Send announcements to players with permission (if false, sends to all)
+  permission-based: false
+
+  # Required permission for receiving announcements (if permission-based is true)
+  receive-permission: "azannouncer.receive"
+
+# Announcement definitions
+announcements:
+  1:
+    message:
+      - "&#FFAA00Welcome to our server, %player_name%!"
+      - "&#00AAFF&lEnjoy your stay!"
+    type: "chat"
+    interval: 60
+    enabled: true
+
+  2:
+    message:
+      - "&#00FF00Use /warp to teleport to different locations!"
+    type: "actionbar"
+    interval: 120
+    enabled: true
+
+  3:
+    message:
+      - "&#FF0000&lSERVER RULES"
+      - "&#FFFF00Please read /rules before playing!"
+    type: "title"
+    interval: 300
+    enabled: true
+
+  4:
+    message:
+      - "&#AA00FF&lTIP"
+      - "&#FFFFFF&oUse /help for a list of commands"
+    type: "subtitle"
+    interval: 180
+    enabled: true
+
+  5:
+    message:
+      - "&#00FFAA&lDONATE"
+      - "&#FFFFFF&oSupport us at /donate"
+    type: "title"
+    interval: 600
+    enabled: false
+
+# Messages for the plugin
+messages:
+  no-permission: "&#FF0000&lERROR: &cYou don't have permission to use this command!"
+  config-reloaded: "&#00FF00&lSUCCESS: &aConfiguration reloaded successfully!"
+  player-not-found: "&#FF0000&lERROR: &cPlayer not found!"
+  invalid-announcement-id: "&#FF0000&lERROR: &cInvalid announcement ID!"
+  announcement-sent: "&#00FF00&lSUCCESS: &aAnnouncement sent successfully!"
+  usage-send: "&#FFAA00&lUSAGE: &e/azannouncer send <id> <player|all>"
+  usage-main: "&#FFAA00&lUSAGE: &e/azannouncer <reload|send> [args...]"

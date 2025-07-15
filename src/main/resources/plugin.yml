@@ -1,0 +1,31 @@
+name: AzAnnouncer
+version: '1.0-SNAPSHOT'
+main: io.github.AzmiiD.azAnnouncer.AzAnnouncer
+api-version: '1.21'
+authors: [Azmi]
+description: Automatic announcement plugin for Minecraft servers
+softdepend: [PlaceholderAPI]
+
+commands:
+  azannouncer:
+    description: Main command for AzAnnouncer
+    usage: /<command> [reload|send]
+    aliases: []
+  rl:
+    description: Reload AzAnnouncer configuration
+    usage: /<command>
+    permission: azannouncer.reload
+
+permissions:
+  azannouncer.reload:
+    description: Allows reloading the plugin configuration
+    default: op
+  azannouncer.send:
+    description: Allows sending announcements manually
+    default: op
+  azannouncer.admin:
+    description: Gives access to all AzAnnouncer commands
+    default: op
+    children:
+      azannouncer.reload: true
+      azannouncer.send: true

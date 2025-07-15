@@ -1,0 +1,46 @@
+# AzAnnouncer Announcements Configuration
+#
+# Each announcement must have:
+# - A unique numeric ID (1, 2, 3, etc.)
+# - message: List of lines to send (supports MiniMessage, hex colors, and PlaceholderAPI)
+# - interval: Time in seconds between announcements
+# - sound: Bukkit Sound enum value (optional, leave empty for no sound)
+#
+# Color formats supported:
+# - MiniMessage: <red>Text</red>, <gradient:red:blue>Text</gradient>
+# - Hex colors: &#FF0000Red Text
+# - Legacy colors: &cRed Text
+#
+# PlaceholderAPI placeholders are supported if the plugin is installed
+
+announcements:
+  1:
+    message:
+      - "&#FFAA00Welcome to the server, %player_name%!"
+      - "&#AAAAAAUse /warp to explore our amazing worlds."
+      - "<gradient:#ff0000:#00ff00>Have fun and enjoy your stay!</gradient>"
+    interval: 60
+    sound: "BLOCK_NOTE_BLOCK_PLING"
+
+  2:
+    message:
+      - "&#00FF00Don't forget to join our Discord!"
+      - "<click:open_url:https://discord.gg/example><aqua>[Click here to join]</aqua></click>"
+    interval: 120
+    sound: "ENTITY_EXPERIENCE_ORB_PICKUP"
+
+  3:
+    message:
+      - "<yellow>⚡ <bold>TIP:</bold></yellow> <gray>Vote for our server to get rewards!</gray>"
+      - "<white>Use <aqua>/vote</aqua> to see all voting sites.</white>"
+    interval: 180
+    sound: "UI_BUTTON_CLICK"
+
+  4:
+    message:
+      - "<gradient:#ff00ff:#00ffff>Server Information</gradient>"
+      - "<gray>• Online Players: <white>%server_online%/%server_max_players%</white></gray>"
+      - "<gray>• TPS: <white>%server_tps_1%</white></gray>"
+      - "<gray>• Your Ping: <white>%player_ping%ms</white></gray>"
+    interval: 300
+    sound: ""
