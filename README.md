@@ -15,6 +15,7 @@ Designed to deliver custom messages in the chat on a timed interval, AzAnnouncer
 - 🎨 Chat color codes support (`&6`, `&a`, etc.)
 - 🧩 Supports simple placeholders (e.g. `{player}`)
 - ⚙️ No external dependencies
+- Enjoy
 
 ---
 
